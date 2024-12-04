@@ -28,25 +28,61 @@ public final class App {
         App.librosAutor(2);
         App.librosCategoria(cat);
         App.librosCategoria1(cat);
+        App.precioLibro();
+        }
    
-    //4.El libro más caro de un autor
-    //5.El libro más barato de Paraninfo
-    //6.
+     /*
+        10-. Editorial con mayor numero de libros 
+             suponer un array de editoriales
+    */
+    
+    //9-. Numero de libros "prestados" de "McGrawHill"
+
+    //8- Que autor tiene más libros "prestados"
+
+    //7-. Verificar si el libro "React Avanzado" de "Anaya" está "prestado"
+
+    //6-. Precio medio de los libros de cada Categoria
+
+    //5-. El libro más barato de Paraninfo
+
+    //4-. El libro más caro de un Autor
+
+    //3-. Los libros de Programacion de Paraninfo mayores de 50€
+    public static int precioLibro(){
+    
+        for (Libro libro: App.LLibros){
+            for(Autor autor: libro.getPrecio()){
+                if (libro.precio=>50,i++){
+                    precio.info();
+
+                }
+            }
+        }
     }
-     //3.Los libros de Programación de Paraninfo mayores de 50€
-    public static
 
-
-     //2.Los libros de Anaya
-     public static ArrayList<Libro> librosEditorial(String ed){
-        ArrayList<Libro> listaLibros= new ArrayList<>();
-        for(Libro libro: App.LLibros){
-            if(Libro.getAutor().editorial.equals(ed)){
-                listaLibros.add(libro);
+    //2-. Los libros de Anaya 
+    public static ArrayList<Libro> librosEditorial(String ed){
+        ArrayList<Libro> listaLibros = new ArrayList<>();
+        for (Autor autor: App.LAutores){
+            if (autor.editorial.equals(ed)){
+                listaLibros.addAll(0,listaLibros) ;
             }
         }
         return listaLibros;
-     }
+    }
+
+    
+    public static ArrayList<Libro> librosEditorial1(String ed){
+        ArrayList<Libro> listaLibros = new ArrayList<>();
+        for (Libro libro: App.LLibros){
+            if (libro.getAutor().editorial.equals(ed)){
+                listaLibros.add(libro);
+            }
+        }
+
+        return listaLibros;
+    }
 
      //1.Info los Autores que tienen libros de Redes
     //-----librosCategoria("Redes")-------

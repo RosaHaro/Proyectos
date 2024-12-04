@@ -47,9 +47,15 @@ public class Libro {
         public void setAutor(Autor autor){
             this.autor = autor;
         }
+        public void setPrecio (Precio precio){
+            this.precio = precio;
+        }
     
         public Autor getAutor(){
             return this.autor;
+        }
+        public Precio getPrecio(){
+            return this.precio;
         }
     
         public void info(){
