@@ -7,8 +7,11 @@ public class Autor {
     private String nombre;
     private String apellidos;
     private String email;
-    //almacenar los "hashCode" de los libros de este autor
-    private ArrayList<Libro>libros =new ArrayList<>();
+    //almacenar los "hashCode de los libros de este autor"
+    //1 autor --> N libros
+    private ArrayList<Libro> libros = new ArrayList<>(); 
+    public String editorial;//Paraninfo,Anaya,MCGrawHill
+
     //Constructor
     public Autor(int id){
         this.setAutorId(id);
@@ -26,8 +29,8 @@ public class Autor {
         // System.out.print("Id: ");
         // int id = this.entrada.nextInt();
         // this.setAutorId(id);
-        System.out.println("Autor con Id:"+this.autorId);
-        System.out.println("----------------------");
+        System.out.println("Autor con Id: " + this.autorId);
+        System.out.println("-----------------------------");
         System.out.print("Nombre: ");
         String nombre = this.entrada.next();
         this.setNombre(nombre);
@@ -49,6 +52,7 @@ public class Autor {
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
+    
     public void setApellidos(String apellidos){
         this.apellidos = apellidos;
     }
@@ -65,16 +69,21 @@ public class Autor {
         return this.nombre.toUpperCase() + ", " + this.apellidos.toUpperCase();
     }
     public void info(){
-        System.out.println("Datos del Autor "+ Integer.toHexString(System.identityHashCode(this)) + " ) ");
-        System.out.println("Id: " + this.autorId);
-        System.out.println("Correo: " + this.email);
+        System.out.println("Datos del Autor ( " + Integer.toHexString(System.identityHashCode(this)) +" ) "
+            + this.getNombreCompleto() + " : ");
+        System.out.print("Id: " + this.autorId);
+        System.out.print("Correo: " + this.email);
         System.out.println("Libros : ");
-        for(Libro libro: this.libros){
+        for (Libro libro: this.libros){
             libro.info();
         }
     }
     // public String toStrng(){}
+
     public void setLibros(Libro libro){
         this.libros.add(libro);
+    }
+    public ArrayList<Libro> getLibros(){
+        return this.libros;
     }
 }
