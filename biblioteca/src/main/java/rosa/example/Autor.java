@@ -2,7 +2,7 @@ package rosa.example;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Autor {
-    public  Scanner entrada = new Scanner(System.in); 
+    
     private int autorId;  
     private String nombre;
     private String apellidos;
@@ -78,7 +78,7 @@ public class Autor {
             libro.info();
         }
     }
-    // public String toStrng(){}
+    // public String toString(){}
 
     public void setLibros(Libro libro){
         this.libros.add(libro);
