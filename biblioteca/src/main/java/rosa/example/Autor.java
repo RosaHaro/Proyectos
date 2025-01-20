@@ -1,6 +1,7 @@
 package rosa.example;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Objects;
 public class Autor {
     
     private int autorId;  

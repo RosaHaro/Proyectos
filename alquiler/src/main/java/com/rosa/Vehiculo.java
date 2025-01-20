@@ -15,8 +15,8 @@ public class Vehiculo {
     private ArrayList<Double> preciosDia = new ArrayList<>();
     private ArrayList<Double> kmsDia = new ArrayList<>();
 //Almacena km y precio acumulados del lunes,martes...
-    private ArrayList<Double>KmDiaSemana = new ArrayList<>();
-    private ArrayList<Double>precioDiaSemana = new ArrayList<>();
+    public ArrayList<Double>KmDiaSemana = new ArrayList<>();
+    public ArrayList<Double>precioDiaSemana = new ArrayList<>();
     public Vehiculo(){
         this.PedirDatos();
         this.fijarPreciosSemana();
